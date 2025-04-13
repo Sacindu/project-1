@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe - Food Recipe System</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <h1>Food<span>Recipe</span></h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search recipes...">
+          <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-menu">
+          <span class="user-name">Hello, <span id="username">User</span>!</span>
+          <button id="logout-btn" class="btn-small">Logout</button>
+        </div>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="saved-recipes.html">My Recipes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container">
+      <div class="recipe-detail">
+        <div class="recipe-header">
+          <h1 class="recipe-title">Loading recipe...</h1>
+          <div class="recipe-meta">
+            <span class="recipe-difficulty"><i class="fas fa-chart-line"></i> <span class="difficulty">Medium</span></span>
+            <span class="recipe-time"><i class="fas fa-clock"></i> <span class="prep-time">0</span> prep + <span class="cook-time">0</span> cook</span>
+            <span class="recipe-servings"><i class="fas fa-utensils"></i> <span class="servings">0</span> servings</span>
+          </div>
+        </div>
+        
+        <div class="recipe-image-container">
+          <img src="img/recipe-placeholder.jpg" alt="Recipe" class="recipe-image">
+        </div>
+        
+        <div class="recipe-actions">
+          <button id="save-recipe" class="btn-action"><i class="far fa-bookmark"></i> Save</button>
+          <button id="share-recipe" class="btn-action"><i class="fas fa-share-alt"></i> Share</button>
+          <button id="print-recipe" class="btn-action"><i class="fas fa-print"></i> Print</button>
+        </div>
+        
+        <div class="recipe-description">
+          <p>Loading recipe description...</p>
+        </div>
+        
+        <div class="recipe-content">
+          <div class="ingredients-section">
+            <h2><i class="fas fa-shopping-basket"></i> Ingredients</h2>
+            <ul class="ingredients-list">
+              <!-- Ingredients will be loaded here -->
+              <li>Loading ingredients...</li>
+            </ul>
+          </div>
+          
+          <div class="instructions-section">
+            <h2><i class="fas fa-list-ol"></i> Instructions</h2>
+            <ol class="instructions-list">
+              <!-- Instructions will be loaded here -->
+              <li>Loading instructions...</li>
+            </ol>
+          </div>
+        </div>
+        
+        <div class="recipe-rating">
+          <h2>Rate this recipe</h2>
+          <div class="stars-container">
+            <i class="far fa-star" data-rating="1"></i>
+            <i class="far fa-star" data-rating="2"></i>
+            <i class="far fa-star" data-rating="3"></i>
+            <i class="far fa-star" data-rating="4"></i>
+            <i class="far fa-star" data-rating="5"></i>
+          </div>
+        </div>
+        
+        <div class="recipe-comments">
+          <h2><i class="far fa-comments"></i> Comments</h2>
+          <div class="comment-form">
+            <textarea id="comment-text" placeholder="Share your thoughts on this recipe..."></textarea>
+            <button id="submit-comment" class="btn">Add Comment</button>
+          </div>
+          <div class="comments-list">
+            <!-- Comments will be loaded here -->
+            <p class="no-comments">No comments yet. Be the first to share your thoughts!</p>
+          </div>
+        </div>
+        
+        <div class="related-recipes">
+          <h2>You might also like</h2>
+          <div class="recipe-grid" id="related-recipes-container">
+            <!-- Related recipes will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>Food<span>Recipe</span></h2>
+          <p>Discover, Cook, Share</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="saved-recipes.html">My Recipes</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3>Stay Updated</h3>
+          <p>Subscribe to our newsletter for new recipes</p>
+          <form id="newsletter-form">
+            <input type="email" placeholder="Your email">
+            <button type="submit" class="btn-small">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Food Recipe System - Group 29</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/recipes.js"></script>
+</body>
+</html>
